@@ -4,13 +4,14 @@ export function reducer (state = {}, action){
 
   switch (action.type) {
     case 'ADD_TO_CART':
+    if (state.products[id].inventory <= 0) return state;
        return {
          ...state,
           products: {
             ...state.products,
             [id]:{
               ...state.products[id],
-              inventory: products - 1
+              inventory: state.products[id].inventory - 1
             }
           }
         }
