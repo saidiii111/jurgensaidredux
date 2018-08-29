@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Productlist from './components/Productlist'
+import Shoppingcart from './components/Shoppingcart'
 import './App.css';
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to Shopping Cart</h1>
         </header>
         <Productlist />
+        <Shoppingcart />
       </div>
     );
   }

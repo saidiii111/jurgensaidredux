@@ -4,3 +4,21 @@ export function addToCart(item){
     item
   }
 }
+
+export function checkout(){
+  return {
+    type: 'CHECKOUT'
+  }
+}
+
+export function removeFromCart(){
+  return {
+    type: 'REMOVE_FROM_CART'
+  }
+}
+
+export function removeAllFromCart(){
+  return {
+    type: 'REMOVE_ALL_FROM_CART'
+  }
+}
