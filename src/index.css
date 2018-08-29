@@ -1,0 +1,14 @@
+header.App-header {
+  background: #245;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #367;
+}
+
+button {
+  background: pink;
+}
