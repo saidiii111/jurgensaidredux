@@ -12,3 +12,7 @@ body {
 button {
   background: pink;
 }
+
+li {
+  list-style-type: none;
+}

@@ -29,7 +29,7 @@ const ShoppingCart = (props) => {
 }
 
 const mapStoreToProps = (store) => ({
-  items: Object.values(store.products)
+  items: Object.values(store.cart)
 })
 
 const mapActionsToProps = {
