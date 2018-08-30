@@ -4,8 +4,6 @@ import {connect} from 'react-redux';
 import {addToCart} from '../modules/actions.js'
 
 
-// const item = ({products})=
-
 const ProductList = (props) => {
 
   const {items, add} = props;
@@ -30,9 +28,6 @@ const mapStoreToProps = (store) => ({
 const mapActionsToProps = {
   add: addToCart
 }
-
-
-
 
 export default connect(
   mapStoreToProps,

@@ -1,17 +1,15 @@
 import React from 'react';
 
 import {connect} from 'react-redux';
-import {removeFromCart, removeAllFromCart} from '../modules/actions.js'
+import ProductList from './Productlist';
+import {removeFromCart, removeAllFromCart} from '../modules/actions.js';
 
+const Shoppingcart = (props) => {
 
-// const item = ({products})=
-
-const ShoppingCart = (props) => {
-
-  const {items} = props;
+  const {items, remove} = props;
 
   return (
-     <ul>
+    <ul>
        {items.map(product => (
          <li key={product.id}>
            <p> {product.title} | ${product.price} | x{product.inventory}
@@ -33,13 +31,10 @@ const mapStoreToProps = (store) => ({
 })
 
 const mapActionsToProps = {
-
+remove: removeFromCart
 }
-
-
-
 
 export default connect(
   mapStoreToProps,
   mapActionsToProps
-)(ShoppingCart);
+)(Shoppingcart);
