@@ -14,7 +14,7 @@ const ProductList = (props) => {
          <li key={product.id}>
            <p> {product.title} | {product.price} | {product.inventory}
            </p>
-           <button className = "addToCart" onClick={()=> add(product)}> Add to Cart </button>
+           <button onClick={()=> add(product)}> Add to Cart </button>
          </li>
        ))}
      </ul>

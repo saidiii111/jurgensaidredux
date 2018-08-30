@@ -11,9 +11,10 @@ export function checkout(){
   }
 }
 
-export function removeFromCart(){
+export function removeFromCart(item){
   return {
-    type: 'REMOVE_FROM_CART'
+    type: 'REMOVE_FROM_CART',
+    item
   }
 }
 

@@ -1,28 +1,30 @@
-import React from 'react';
-
+import React, {Fragment} from 'react';
 import {connect} from 'react-redux';
 import ProductList from './Productlist';
 import {removeFromCart, removeAllFromCart} from '../modules/actions.js';
 
 const Shoppingcart = (props) => {
 
-  const {items, remove} = props;
+  const {items, removeFromCart} = props;
 
   return (
-    <ul>
-       {items.map(product => (
-         <li key={product.id}>
-           <p> {product.title} | ${product.price} | x{product.inventory}
-           </p>
-           <button
-            onClick={() => removeFromCart(product)}
-          >Remove One</button>
-          <button
-            onClick={() => removeAllFromCart(product)}
-          >Remove All</button>
-         </li>
-       ))}
-     </ul>
+    <Fragment>
+        <ul>
+           {items.map(product => (
+             <li key={product.id}>
+               <p> {product.title} | ${product.price} | quantity{product.quantity}
+               </p>
+               <button
+                onClick={() => removeFromCart(product)}
+              >Remove One</button>
+              <button
+                onClick={() => removeAllFromCart(product)}
+              >Remove All</button>
+             </li>
+           ))}
+         </ul>
+         <button>Check out</button>
+     </Fragment>
   );
 }
 
@@ -31,7 +33,7 @@ const mapStoreToProps = (store) => ({
 })
 
 const mapActionsToProps = {
-remove: removeFromCart
+removeFromCart: removeFromCart
 }
 
 export default connect(
